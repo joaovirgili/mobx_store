@@ -17,10 +17,16 @@ void main() {
       expect(cart, isInstanceOf<CartController>());
     });
 
-    test("Set Value", () {
+    test("Add to cart", () {
       expect(cart.quantity, equals(0));
-      cart.increment();
+      cart.add();
       expect(cart.quantity, equals(1));
+    });
+
+    test("Remove from cart", () {
+      expect(cart.quantity, equals(1));
+      cart.remove();
+      expect(cart.quantity, equals(0));
     });
   });
 }
