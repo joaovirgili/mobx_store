@@ -9,7 +9,13 @@ abstract class _CartBase with Store {
   int quantity = 0;
 
   @action
-  void increment() {
+  void add() {
     quantity++;
+  }
+
+  @action
+  void remove() {
+    quantity--;
+    print(quantity);
   }
 }

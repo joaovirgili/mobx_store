@@ -13,7 +13,7 @@ class CartItemWidget extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           IconButton(
-              icon: Icon(Icons.shopping_cart, size: 22), onPressed: controller.increment),
+              icon: Icon(Icons.shopping_cart, size: 22), onPressed: controller.add),
           Positioned(
             top: 5,
             right: 5,

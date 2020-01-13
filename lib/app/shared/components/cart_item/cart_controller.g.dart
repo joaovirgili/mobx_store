@@ -29,10 +29,20 @@ mixin _$CartController on _CartBase, Store {
   final _$_CartBaseActionController = ActionController(name: '_CartBase');
 
   @override
-  void increment() {
+  void add() {
     final _$actionInfo = _$_CartBaseActionController.startAction();
     try {
-      return super.increment();
+      return super.add();
+    } finally {
+      _$_CartBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void remove() {
+    final _$actionInfo = _$_CartBaseActionController.startAction();
+    try {
+      return super.remove();
     } finally {
       _$_CartBaseActionController.endAction(_$actionInfo);
     }
